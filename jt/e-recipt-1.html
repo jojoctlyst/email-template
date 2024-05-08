@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{.Subject}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="{{.URL}}/favicon.ico" rel="shortcut icon">
+    <style type="text/css">
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .background {
+                background-color: #222;
+            }
+
+            .main-content {
+                background-color: #181818;
+            }
+        }
+
+        .background {
+            background-color: #222;
+        }
+
+        .main-content {
+            width: auto;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px 0 0;
+            color: #FFFFFF;
+            background-color: #181818;
+            font-family: Roboto;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .main-content .content, .main-content .footer {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .footer {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: #000;
+        }
+
+        p {
+            font-size: 12px;
+            margin: 0;
+            line-height: 18px;
+        }
+
+        .greeting-title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .greeting-title span {
+            font-weight: 700;
+        }
+
+        .section {
+            padding: 20px 0;
+        }
+
+        .bordered {
+            border-bottom: 1px #424242 solid;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table.table-item-detail thead {
+            background-color: #282828;
+        }
+
+        .table.table-item-detail thead th {
+            padding: 7px 0;
+            font-weight: 400;
+        }
+
+        .table.table-item-detail thead th:first-child,
+        .table.table-item-detail tbody td:first-child {
+            padding-left: 16px;
+            text-align: left;
+        }
+
+        .table.table-item-detail thead th:nth-child(2),
+        .table.table-item-detail tbody td:nth-child(2) {
+            text-align: center;
+        }
+
+        .table.table-item-detail thead th:last-child,
+        .table.table-item-detail tbody td:last-child,
+        .table.table-item-detail tfoot td:last-child {
+            padding-right: 16px;
+            text-align: right;
+        }
+
+        .table.table-item-detail tbody td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1pt solid #313131;
+        }
+
+        .table.table-item-detail tbody tr:first-child td,
+        .table.table-item-detail tfoot tr:first-child td {
+            padding-top: 16px;
+        }
+
+        .table.table-item-detail tfoot td {
+            padding-bottom: 10px;
+        }
+
+        .table.table-item-detail tfoot td:first-child {
+            text-align: right;
+        }
+
+        .table .highlight td:not(:first-child) {
+            border-bottom: solid 1px #313131;
+        }
+
+        .table .highlight td:nth-child(2) {
+            text-align: right;
+        }
+
+        .table .highlight + tr td {
+            padding-top: 10px;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .card {
+            padding: 12px;
+            border-radius: 4px;
+            background: #282828;
+        }
+
+        .image-banner {
+            padding-bottom: 0;
+        }
+
+        .image-banner a {
+            display: block;
+        }
+
+        .image-banner a:not(:last-child) {
+
+            margin-bottom: 24px;
+        }
+
+        .image-banner a img {
+            width: 100%;
+        }
+
+        .badge {
+            border-radius: 32px;
+            padding: 2px 8px;
+            width: fit-content;
+            float: right;
+        }
+
+        .badge-green {
+            background: #1DAB6A;
+        }
+
+        .badge-orange {
+            background: #EF6C00;
+        }
+
+        .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .text-orange {
+            color: #F68522;
+        }
+
+        .text-grey {
+            color: #9E9E9E;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .copyright {
+            padding-top: 16px;
+            padding-bottom: 20px;
+        }
+
+        .left-content {
+            padding-top: 8px;
+        }
+
+        .left-content a:not(:last-child) {
+            padding-right: 8px;
+        }
+
+        .right-content {
+            padding-top: 14px
+        }
+
+        .right-content a:not(:last-child) {
+            padding-right: 13.33px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="background">
+    <div class="main-content">
+        <div class="content">
+            <!-- header -->
+            <div>
+                <a href="{{.URL}}/?utm_source=email&utm_medium=banner&utm_campaign=invoice_offline"
+                   target="_blank">
+                    <img src="https://assets.jamtangan.com/images/banner/email/logo-machtwatch231018.png"
+                         alt="MACHTWATCH"/>
+                </a>
+            </div>
+            <!-- header -->
+
+            <div class="section bordered">
+                <h1 class="greeting-title">Halo <span>Alradhi Kaniza,</span></h1>
+                <p>
+                    Terima kasih telah bertransaksi di toko offline Jamtangan.com Plaza Blok M.
+                </p>
+                <p>
+                    Berikut detail e-receipt:
+                </p>
+            </div>
+
+            <div class="section bordered">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <table class="table">
+                                <tr class="bold">
+                                    <td>Detail Customer</td>
+                                </tr>
+                                <tr>
+                                    <td>Alradhi Kaniza</td>
+                                </tr>
+                                <tr>
+                                    <td>Member Silver</td>
+                                </tr>
+                                <tr>
+                                    <td>08123012901239</td>
+                                </tr>
+                                <tr>
+                                    <td>lumbalumbadiair@gmail.com</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td style="vertical-align: middle">
+                            <table class="table" style="text-align: right">
+                                <tr class="bold">
+                                    <td>No. Order 234059409</td>
+                                </tr>
+                                <tr>
+                                    <td>12 Januari 2025, 11:23:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sales (Uki Lukman)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="badge badge-green">Lunas</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <table class="table table-item-detail">
+                    <thead>
+                    <tr>
+                        <th>Produk</th>
+                        <th width="128px">Jumlah</th>
+                        <th width="112px">Harga</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="ellipsis">
+                                Casio General LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless Casio
+                                General
+                                LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Rp2.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ellipsis">
+                                Casio General LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless Casio
+                                General
+                                LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Rp2.500.000</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="2">Subtotal :</td>
+                        <td>Rp5.220.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Diskon Toko :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">JT Point Terpakai :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Potongan Voucher :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>&nbsp;</td>
+                        <td>Total Tagihan :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Kredit BCA :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Debit Mandiri :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Debit BSI :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Transfer BNI :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>&nbsp;</td>
+                        <td colspan>Tunai :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr class="bold">
+                        <td colspan="2">Total Pembayaran :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Kurang Bayar :</td>
+                        <td class="text-orange">-Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">JT Point Belanja :</td>
+                        <td>-Rp20.000</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="section card">
+                <p style="margin-bottom: 8px">Catatan :</p>
+                <p>Produk ABC belum diambil</p>
+            </div>
+
+            <div class="section">
+                <p>Plaza Blok M</p>
+                <p>Plaza Blok M, Lantai 1 Unit 128-129 Jl. Bulungan No.76, Jakarta Selatan, DKI Jakarta</p>
+                <p>Telp: (021) 7209077 - 087886671311</p>
+            </div>
+
+            <div class="bordered text-grey" style="padding-bottom: 10px">
+                <p>Email ini dibuat secara otomatis. Mohon tidak membalas email ini.</p>
+            </div>
+
+            <div class="copyright text-grey">
+                <p>Jamtangan.com - No.1 Watch Store in Indonesia</p>
+                <p>Copyright © 2023 Jamtangan.com/PT. Ming Jaya Sejahtera, All Rights Reserved.</p>
+            </div>
+
+            <div class="section image-banner">
+                <a href="">
+                    <img src="https://placehold.co/520x58" alt="">
+                </a>
+                <a href="">
+                    <img src="https://placehold.co/520x58" alt="">
+                </a>
+                <a href="">
+                    <img src="https://placehold.co/520x58" alt="">
+                </a>
+                <a href="">
+                    <img src="https://placehold.co/520x58" alt="">
+                </a>
+            </div>
+
+            <div class="section">
+                <table class="table">
+                    <tr style="border-top: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0">
+                        <td style="padding: 14px 0;">
+                            <a href="">
+                                <img src="https://placehold.co/143x44" alt="">
+                            </a>
+                        </td>
+                        <td style="text-align: right; padding: 14px 0">
+                            <a href="">
+                                <img src="https://placehold.co/145x44" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <table class="table">
+                <tr>
+                    <td class="text-grey">Download Apps:</td>
+                    <td class="text-grey text-right">Ikuti Kami di:</td>
+                </tr>
+                <tr>
+                    <td class="left-content">
+                        <a href="">
+                            <img src="https://placehold.co/107x32" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/107x32" alt="">
+                        </a>
+                    </td>
+                    <td class="right-content text-right">
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://placehold.co/20" alt="">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

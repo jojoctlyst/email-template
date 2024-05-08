@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8">
+    <title>{{.Subject}}</title>
+    <link href="{{.URL}}/favicon.ico" rel="shortcut icon">
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #222;
+                color: #ffffff !important;
+            }
+        }
+
+        body {
+            background: #222;
+            color: #ffffff !important;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 1.6;
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        table {
+            max-width: 600px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        tr, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .doublebackground {
+            background-image: url(https://assets.jamtangan.com/images/icn/topleft.png), url(https://assets.jamtangan.com/images/icn/bottomright.png);
+            background-position: top left, bottom right;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 80px;
+            background-color: #181818;
+        }
+    </style>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" width="600" class="doublebackground">
+    <tr>
+        <td>
+            <div style="max-width:560px;display:block;border-collapse:collapse;margin:0 auto;padding:15px 20px 0 20px;">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td align="right">
+                            <a href="{{.URL}}/?utm_source=email&utm_medium=banner&utm_campaign=invoice_offline"
+                               target="_blank">
+                                <img src="https://assets.jamtangan.com/images/banner/email/logo-machtwatch231018.png"
+                                     alt="MACHTWATCH"/>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="max-width:600px;display:block;border-collapse:collapse;margin:0 auto;padding:0 20px;">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div style="margin:50px 0 20px 0;padding:0">
+                                <table>
+                                    <tbody>
+                                    <tr style="margin:0 0 10px;padding:0">
+                                        <td colspan=4 style="font-size:25px; letter-spacing: 5px; line-height:50px;">
+                                            INVOICE
+                                        </td>
+                                    </tr>
+                                    <tr style="margin:0;padding:0;vertical-align: top;">
+                                        <td style="margin:0;padding:0; width:70px;">
+                                            Customer
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            :
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            asda
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="margin:0;padding:0;vertical-align: top;">
+                                        <td style="margin:0;padding:0; width:70px;">
+                                            No. Tlp
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            :
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            123
+                                        </td>
+                                        <td align="right">
+                                            No Struk : 123
+                                        </td>
+                                    </tr>
+                                    <tr style="margin:0;padding:0;vertical-align: top;">
+                                        <td style="margin:0;padding:0; width:70px;">
+                                            Sales
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            :
+                                        </td>
+                                        <td style="margin:0;padding:0">
+                                            123
+                                        </td>
+                                        <td align="right">
+                                            123
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="margin:0;padding:0">
+                                <table>
+                                    <thead style="color:white;text-align:left;margin:0;padding:0">
+                                    <tr style="margin:0;padding:0;font-weight:normal;background-color:#f685224f;">
+                                        <th style="width:40%;margin:0;padding:5px;font-weight:normal;">DETAIL ITEM</th>
+                                        <th style="width:10%;margin:0;padding:5px;font-weight:normal;text-align:center;">
+                                            QTY
+                                        </th>
+                                        <th style="width:20%;margin:0;padding:5px;font-weight:normal;text-align:center;">
+                                            HARGA
+                                        </th>
+                                        <th style="width:20%;margin:0;padding:5px;font-weight:normal;text-align:center">
+                                            TOTAL HARGA
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody style="margin:0;padding:0">
+                                    {{range $element := .Data.InvoiceData.CartItems}}
+                                    <tr style="margin:0;padding:0;border-top-color:#f685224f;border-top-width:1px;border-top-style:solid;">
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;border-top-color:#f685224f;border-top-width:1px;border-top-style:solid;margin:0;padding:5px;"
+                                            valign="top">
+                                            {{if eq $element.DataType "product" }}
+                                            {{$element.ProductSku}}
+                                            {{else}}
+                                            {{$element.Name}}
+                                            {{end}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center;border-top-color:#f685224f;border-top-width:1px;border-top-style:solid;margin:0;padding:5px;"
+                                            valign="top">
+                                            {{$element.Qty}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center;border-top-color:#f685224f;border-top-width:1px;border-top-style:solid;margin:0;padding:5px;"
+                                            valign="top">
+                                            Rp {{$element.PriceThousand}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;border-top-width:1px;border-top-color:#f685224f;border-top-style:solid;text-align:right;margin:0;padding:5px"
+                                            align="right" valign="top">
+                                            Rp {{$element.SubTotal}}
+                                        </td>
+                                    </tr>
+                                    {{end}}
+                                    <tr style="margin:0;padding:0;background-color: #f685224f!important;">
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px"
+                                            valign="top">
+                                            TOTAL
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center"
+                                            valign="top">
+                                            {{.Data.InvoiceData.TotalQty}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center"
+                                            valign="top">
+
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;text-align:right;margin:0;padding:5px"
+                                            align="right" valign="top">
+                                            Rp {{.Data.InvoiceData.SummaryOrderPrice.TotalPriceInvoice }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot style="margin:0;padding:0">
+                                    {{range $element := .Data.InvoiceData.Payments}}
+                                    <tr style="margin:0;padding:0;border-bottom-color:#f685224f;border-bottom-width:1px;border-bottom-style:solid;">
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px"
+                                            valign="top">
+                                            {{$element.Name}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center"
+                                            valign="top">
+
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:right"
+                                            valign="top">
+
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;text-align:right;margin:0;padding:5px"
+                                            align="right" valign="top">
+                                            {{$element.AmountInvoice}}
+                                        </td>
+                                    </tr>
+                                    {{end}}
+                                    <tr style="margin:0;padding:0;border-bottom-color:#f685224f;border-bottom-width:1px;border-bottom-style:solid;">
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px"
+                                            valign="top">
+                                            {{if .Data.InvoiceData.IsSelisih }}
+                                            Kurang Bayar
+                                            {{end}}
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:center"
+                                            valign="top">
+
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;margin:0;padding:5px;text-align:right"
+                                            valign="top">
+
+                                        </td>
+                                        <td style="line-height:20px;vertical-align:top;text-align:right;margin:0;padding:5px"
+                                            align="right" valign="top">
+                                            Rp {{.Data.InvoiceData.DiffPrice}}
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                                <div style="margin:0 0 20px; padding:20px; background:#f685221f; ">
+                                    <table>
+                                        <tbody>
+
+                                        <tr style="margin:0;padding:0;vertical-align: top;">
+                                            <td style="margin:0;padding:0; width:60px;">
+                                                Note
+                                            </td>
+                                            <td style="width:10px;margin:0;padding:0">
+                                                :
+                                            </td>
+                                            <td style="margin:0;padding:0;white-space: pre-line;">
+                                                {{.Data.InvoiceData.NoteExternal}}
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="max-width:600px;display:block;border-collapse:collapse;margin:0 0 10px 0;padding:0 15px;">
+                <table style="color:#FFFFFF">
+                    <tbody>
+                    <tr>
+                        <td colspan="2">
+                            Kira-kira kamu puas ga dengan pelayanan kami? <br/>
+                            <a style="color:#f68522" href="{{.Data.InvoiceData.LinkReview}}" target="_blank">Yuk, tulis
+                                unek-unek mu di sini</a>
+                            <br/><br/>
+                            Cintaku boleh kamu balikin,<br/>
+                            tapi barang yang dibeli jangan ya kak. <br/>
+                            Terima kasih sudah berbelanja! <br/> <br/>
+
+                            <strong>Ada Pertanyaan?</strong><br/>
+                            Hubungi Customer Service kami<br/>
+                            <a style="color:#f68522"
+                               href="https://www.jamtangan.com/contact-us/?utm_source='.$utm_source.'&utm_medium='.$utm_medium.'&utm_campaign='.$utm_campaign.'"
+                               target="_blank">klik disini</a>
+                            <br/><br/>
+                        </td>
+
+                        <td colspan="2" align="right" style="">
+                            <div>
+                                <a href="https://jamtangan.page.link/invoice/" target="_blank">
+                                    <img src="https://assets.jamtangan.com/images/icn/appstorebutton.png"
+                                         alt="App Store" width="101" height="30"/>
+                                </a>&nbsp;
+
+                                <a href="https://jamtangan.page.link/invoice/" target="_blank">
+                                    <img src="https://assets.jamtangan.com/images/icn/googleplaybutton.png"
+                                         alt="Play Store" width="101" height="30"/>
+                                </a>
+                            </div>
+                            <br/><br/>
+                            <div>
+                                <a href="https://www.instagram.com/machtwatch/" target="_blank" title="Instagram">
+                                    <img src="https://assets.jamtangan.com/images/icn/instagram.png" alt="Ig" width="20"
+                                         height="20"/>
+                                </a>&nbsp;
+
+                                <a href="https://www.facebook.com/jamtangancom" target="_blank" title="Facebook">
+                                    <img src="https://assets.jamtangan.com/images/icn/facebook.png" alt="Fb" width="20"
+                                         height="20"/>
+                                </a>&nbsp;
+
+                                <a href="https://twitter.com/machtwatch" target="_blank" title="Twitter">
+                                    <img src="https://assets.jamtangan.com/images/icn/twitters.png" alt="Tw" width="20"
+                                         height="20"/>
+                                </a>&nbsp;
+
+
+                                <a href="https://blog.jamtangan.com/?utm_source='.$utm_source.'&utm_medium='.$utm_medium.'&utm_campaign='.$utm_campaign.'"
+                                   target="_blank" title="Blog">
+                                    <img src="https://assets.jamtangan.com/images/icn/blog-mw.png" alt="Blog" width="21"
+                                         height="21"/>
+                                </a>&nbsp;
+                            </div>
+                            <br/><br/>
+
+                            <strong>Email ini dikirim oleh</strong><br/>
+                            PT. Ming Jaya Sejahtera<br/>Jakarta, Indonesia
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="max-width:600px;display:block;border-collapse:collapse;margin:0 auto;padding:0;font-size:13px">
+                <table>
+                    <tbody>
+                    <tr align="middle" height="40">
+                        <td colspan="4" style="padding-bottom:20px !important;">
+                            <br/><a href="'.$url.'/?utm_source=email&utm_medium=referral&utm_campaign='.$utm_campaign.'"
+                                    target="_blank" style="">Jamtangan.com</a> - #1 Watch Store In Indonesia<br/>
+                            Copyright &copy; {{.CurrentYear}} <a
+                                href="'.$url.'/?utm_source=email&utm_medium=referral&utm_campaign='.$utm_campaign.'"
+                                target="_blank" style="">Jamtangan.com</a> / PT. Ming Jaya Sejahtera, All Rights
+                            Reserved.
+                            <br/>
+                            <br/>
+                            <img src="https://assets.jamtangan.com/images/icn/iconfooterstruk.png"/>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
