@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{.Subject}}</title>
+  <link href="{{.URL}}/favicon.ico" rel="shortcut icon">
+  <style type="text/css">
+    @media (prefers-color-scheme: dark) {
+      .background {
+        background-color: #222;
+      }
+
+      .main-content {
+        background-color: #181818;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .main-content {
+        padding: 24px 0 0;
+      }
+
+      .main-content .content,
+      .main-content .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .main-content,
+      p {
+        font-size: 8px !important;
+        line-height: 10.8px;
+      }
+
+      p {
+        line-height: 10.8px;
+      }
+
+      .greeting-title {
+        font-size: 10px;
+        margin-bottom: 8px;
+      }
+
+      .section {
+        padding: 12px 0;
+      }
+
+      .right-content a:not(:last-child) {
+        padding-right: 8px !important;
+      }
+
+      .social-icon {
+        width: 12px;
+        height: 12px;
+      }
+
+      .app-stores {
+        width: 64.2px;
+        height: 19.2px;
+      }
+
+      .logo {
+        width: 132px;
+        padding-bottom: 9.33px;
+      }
+
+      .member-badge {
+        height: 11.4px;
+      }
+
+      .table.table-detail-customer tr:not(:last-child) td {
+        padding-bottom: 2.4px;
+      }
+
+      .badge {
+        border-radius: 19.2px;
+        padding: 1.2px 4.8px;
+        font-size: 6px;
+      }
+
+      .table.table-item-detail thead th {
+        padding: 4.2px 0;
+      }
+
+      .table.table-item-detail thead th:first-child,
+      .table.table-item-detail tbody td:first-child {
+        padding-left: 9.6px;
+      }
+
+      .table.table-item-detail thead th:last-child,
+      .table.table-item-detail tbody td:last-child,
+      .table.table-item-detail tfoot td:last-child {
+        padding-right: 9.6px;
+      }
+
+      .table.table-item-detail tbody tr:first-child td,
+      .table.table-item-detail tfoot tr:first-child td {
+        padding-top: 9.6px;
+      }
+
+      .table.table-item-detail tbody td {
+        padding-bottom: 7.2px;
+      }
+
+      .table.table-item-detail tfoot td {
+        padding-bottom: 6px;
+      }
+
+      .table .highlight + tr td {
+        padding-top: 6px;
+      }
+
+      .card {
+        padding: 7.2px;
+        border-radius: 2.4px;
+      }
+
+      .card.description p:first-child {
+        margin-bottom: 4.8px;
+      }
+
+      .pb-1 {
+        padding-bottom: 6px;
+      }
+
+      .copyright {
+        padding-top: 9.6px;
+      }
+
+      .image-banner {
+        padding-bottom: 0;
+      }
+
+      .image-banner a:not(:last-child) {
+        margin-bottom: 14.4px;
+      }
+
+      #table-10-years tr td:first-child {
+        padding: 8.4px 0;
+      }
+
+      #table-10-years tr td:last-child {
+        padding: 8.4px 0;
+      }
+
+      .footer {
+        padding-top: 9.6px;
+        padding-bottom: 9.6px;
+      }
+
+      .left-content {
+        padding-top: 4.8px;
+      }
+
+      .right-content {
+        padding-top: 8.4px;
+      }
+
+      .text-capitalize {
+        text-transform: capitalize;
+      }
+    }
+  </style>
+</head>
+<body style="width: 100%; height: 100%; margin: 0; padding: 0;">
+<style type="text/css">
+  @media (prefers-color-scheme: dark) {
+    .background {
+      background-color: #222;
+    }
+
+    .main-content {
+      background-color: #181818;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .main-content {
+      padding: 24px 0 0;
+    }
+
+    .main-content .content,
+    .main-content .footer {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .main-content,
+    p {
+      font-size: 8px !important;
+      line-height: 10.8px;
+    }
+
+    p {
+      line-height: 10.8px;
+    }
+
+    .greeting-title {
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      padding: 12px 0;
+    }
+
+    .right-content a:not(:last-child) {
+      padding-right: 8px !important;
+    }
+
+    .social-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .app-stores {
+      width: 64.2px;
+      height: 19.2px;
+    }
+
+    .logo {
+      width: 132px;
+      padding-bottom: 9.33px;
+    }
+
+    .member-badge {
+      height: 11.4px;
+    }
+
+    .table.table-detail-customer tr:not(:last-child) td {
+      padding-bottom: 2.4px;
+    }
+
+    .badge {
+      border-radius: 19.2px;
+      padding: 1.2px 4.8px;
+      font-size: 6px;
+    }
+
+    .table.table-item-detail thead th {
+      padding: 4.2px 0;
+    }
+
+    .table.table-item-detail thead th:first-child,
+    .table.table-item-detail tbody td:first-child {
+      padding-left: 9.6px;
+    }
+
+    .table.table-item-detail thead th:last-child,
+    .table.table-item-detail tbody td:last-child,
+    .table.table-item-detail tfoot td:last-child {
+      padding-right: 9.6px;
+    }
+
+    .table.table-item-detail tbody tr:first-child td,
+    .table.table-item-detail tfoot tr:first-child td {
+      padding-top: 9.6px;
+    }
+
+    .table.table-item-detail tbody td {
+      padding-bottom: 7.2px;
+    }
+
+    .table.table-item-detail tfoot td {
+      padding-bottom: 6px;
+    }
+
+    .table .highlight + tr td {
+      padding-top: 6px;
+    }
+
+    .card {
+      padding: 7.2px;
+      border-radius: 2.4px;
+    }
+
+    .card.description p:first-child {
+      margin-bottom: 4.8px;
+    }
+
+    .pb-1 {
+      padding-bottom: 6px;
+    }
+
+    .copyright {
+      padding-top: 9.6px;
+    }
+
+    .image-banner {
+      padding-bottom: 0;
+    }
+
+    .image-banner a:not(:last-child) {
+      margin-bottom: 14.4px;
+    }
+
+    #table-10-years tr td:first-child {
+      padding: 8.4px 0;
+    }
+
+    #table-10-years tr td:last-child {
+      padding: 8.4px 0;
+    }
+
+    .footer {
+      padding-top: 9.6px;
+      padding-bottom: 9.6px;
+    }
+
+    .left-content {
+      padding-top: 4.8px;
+    }
+
+    .right-content {
+      padding-top: 8.4px;
+    }
+
+    .text-capitalize {
+      text-transform: capitalize;
+    }
+  }
+</style>
+<div class="background" style="background-color: #222;">
+  <div class="main-content" style="width: auto; max-width: 600px; margin: auto; padding: 40px 0 0; color: #FFFFFF; background-color: #181818; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 12px; line-height: 18px;">
+    <div class="content" style="padding-left: 40px; padding-right: 40px;">
+      <!-- header -->
+      <div>
+        <a href="{{.URL}}/?utm_source=email&utm_medium=banner&utm_campaign=invoice_offline" target="_blank" style="text-decoration: none;">
+          <img src="https://assetsnew.machtwatch.net/images/pos/logo-jt.png" class="logo" alt="Logo" style="width: 220px; padding-bottom: 16px;" width="220">
+        </a>
+      </div>
+      <!-- header -->
+
+      <div class="section bordered" style="padding: 20px 0; border-bottom: 1px #424242 solid;">
+        <h1 class="greeting-title" style="font-size: 16px; font-weight: 400; margin-top: 0; margin-bottom: 10px;">Halo&nbsp;<span style="font-weight: 700;">Alradhi Kaniza,</span></h1>
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">
+          Terima kasih telah bertransaksi di toko offline&nbsp;<span class="bold" style="font-weight: 700;">Jamtangan.com Plaza Blok M.</span>
+        </p>
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">
+          Berikut detail e-receipt:
+        </p>
+      </div>
+
+      <div class="section bordered" style="padding: 20px 0; border-bottom: 1px #424242 solid;">
+        <table class="table" style="width: 100%; border-collapse: collapse;" width="100%">
+          <tr>
+            <td>
+              <table class="table table-detail-customer" style="width: 100%; border-collapse: collapse;" width="100%">
+                <tr class="bold" style="font-weight: 700;">
+                  <td style="padding: 0; padding-bottom: 4px;">Detail Customer</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; padding-bottom: 4px;">Alradhi Kaniza</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; padding-bottom: 4px;">
+                    <img src="https://assetsnew.machtwatch.net/images/pos/non-member.svg" class="member-badge" alt="member-badge" style="height: 18px;" height="18">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; padding-bottom: 4px;">08123012901239</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0;">lumbalumbadiair@gmail.com</td>
+                </tr>
+              </table>
+            </td>
+
+            <td style="vertical-align: middle">
+              <table class="table text-right table-detail-customer" style="width: 100%; border-collapse: collapse; text-align: right;" width="100%" align="right">
+                <tr class="bold" style="font-weight: 700;">
+                  <td style="padding: 0; padding-bottom: 4px;">No. Order 234059409</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; padding-bottom: 4px;">12 Januari 2025, 11:23:00</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; padding-bottom: 4px;">Sales (Uki Lukman)</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0;">
+                    <div class="badge badge-green" style="font-family: 'Poppins', sans-serif; border-radius: 32px; padding: 2px 8px; width: fit-content; float: right; font-size: 10px; background: #1DAB6A;">Lunas</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section" style="padding: 20px 0;">
+        <table class="table table-item-detail" style="width: 100%; border-collapse: collapse;" width="100%">
+          <thead style="background-color: #282828;" bgcolor="#282828">
+          <tr>
+            <th style="padding: 7px 0; font-weight: 400; padding-left: 16px; text-align: left;" align="left">Produk</th>
+            <th width="25%" style="padding: 7px 0; font-weight: 400; text-align: center;" align="center">Jumlah</th>
+            <th width="25%" style="padding: 7px 0; font-weight: 400; padding-right: 16px; text-align: right;" align="right">Harga</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="padding-bottom: 12px; border-bottom: 1pt solid #313131; padding-left: 16px; text-align: left; padding-top: 16px;" align="left">
+              <div>
+                Casio General LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless Casio
+                General
+                LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless
+              </div>
+            </td>
+            <td style="padding-bottom: 12px; border-bottom: 1pt solid #313131; text-align: center; padding-top: 16px;" align="center">1</td>
+            <td style="padding-bottom: 12px; border-bottom: 1pt solid #313131; padding-right: 16px; text-align: right; padding-top: 16px;" align="right">Rp2.500.000</td>
+          </tr>
+          <tr>
+            <td style="padding-top: 12px; padding-bottom: 12px; border-bottom: 1pt solid #313131; padding-left: 16px; text-align: left;" align="left">
+              <div>
+                Casio General LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless Casio
+                General
+                LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless
+              </div>
+            </td>
+            <td style="padding-top: 12px; padding-bottom: 12px; border-bottom: 1pt solid #313131; text-align: center;" align="center">1</td>
+            <td style="padding-top: 12px; padding-bottom: 12px; border-bottom: 1pt solid #313131; padding-right: 16px; text-align: right;" align="right">Rp2.500.000</td>
+          </tr>
+          </tbody>
+        </table>
+        <table class="table table-item-detail" style="width: 100%; border-collapse: collapse;" width="100%">
+          <tfoot>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right; padding-top: 16px;" width="40%" align="right">Subtotal :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right; padding-top: 16px;" align="right">Rp5.220.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Biaya Pengiriman :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">Rp20.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">JT Point Terpakai :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">-Rp30.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Potongan Voucher (SIKAT60) :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">-Rp30.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Diskon Toko :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">-Rp20.000</td>
+          </tr>
+          <tr class="highlight bold" style="font-weight: 700;">
+            <td style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">&nbsp;</td>
+            <td style="padding-bottom: 10px; border-bottom: solid 1px #313131; text-align: right;" align="right">Total Tagihan :</td>
+            <td style="padding-bottom: 10px; border-bottom: solid 1px #313131; padding-right: 16px; text-align: right;" align="right">Rp5.170.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; padding-top: 10px; width: 40%; text-align: right;" width="40%" align="right">Kartu Kredit BCA :</td>
+            <td style="padding-bottom: 10px; padding-top: 10px; padding-right: 16px; text-align: right;" align="right">Rp1.000.000</td>
+          </tr>
+          <tr class="highlight-top">
+            <td style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">&nbsp</td>
+            <td style="border-top: solid 1px #313131; padding-bottom: 0; text-align: right;" align="right">Kartu Debit Mandiri :</td>
+            <td style="border-top: solid 1px #313131; padding-bottom: 0; padding-right: 16px; text-align: right;" align="right">Rp1.000.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Kartu Debit BSI :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">Rp1.000.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Transfer Bank BNI :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">Rp1.000.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Tunai :</td>
+            <td style="padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">Rp1.300.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Lebih Bayar :</td>
+            <td class="text-success" style="color: #28C76F; padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">Rp130.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">Kurang Bayar :</td>
+            <td class="text-orange" style="color: #F68522; padding-bottom: 10px; padding-right: 16px; text-align: right;" align="right">-Rp20.000</td>
+          </tr>
+          <tr class="highlight">
+            <td style="padding-bottom: 10px; width: 40%; text-align: right;" width="40%" align="right">&nbsp;</td>
+            <td style="padding-bottom: 10px; border-bottom: solid 1px #313131; text-align: right;" align="right">Pelunasan (Kartu Debit BCA) :</td>
+            <td style="padding-bottom: 10px; border-bottom: solid 1px #313131; padding-right: 16px; text-align: right;" align="right">Rp1.170.000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-bottom: 10px; padding-top: 10px; width: 40%; text-align: right;" width="40%" align="right">JT Point yang Akan Didapatkan :</td>
+            <td style="padding-bottom: 10px; padding-top: 10px; padding-right: 16px; text-align: right;" align="right">+140.000</td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="section" style="padding: 20px 0; padding-top: 0;">
+        <div class="card" style="padding: 12px; border-radius: 4px; background: #282828;">
+          <p style="margin: 0; font-size: 12px; line-height: 18px;">Tanggal Pelunasan : <span class="bold" style="font-weight: 700;">20 Januari 2025, 11:20:00</span></p>
+        </div>
+      </div>
+
+
+      <div class="section" style="padding: 0;">
+        <div class="card description" style="padding: 12px; border-radius: 4px; background: #282828;">
+          <p style="margin: 0; font-size: 12px; line-height: 18px; margin-bottom: 8px;">Catatan :</p>
+          <p style="margin: 0; font-size: 12px; line-height: 18px;">Produk ABC belum diambil</p>
+        </div>
+      </div>
+
+      <div class="section" style="padding: 20px 0;">
+        <p class="bold" style="margin: 0; font-size: 12px; line-height: 18px; font-weight: 700;">Plaza Blok M</p>
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">Plaza Blok M, Lantai 1 Unit 128-129 Jl. Bulungan No.76, Jakarta Selatan, DKI Jakarta</p>
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">Telp: (021) 7209077 - 087886671311</p>
+      </div>
+
+      <div class="bordered text-grey pb-1" style="border-bottom: 1px #424242 solid; color: #9E9E9E; padding-bottom: 10px;">
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">Email ini dibuat secara otomatis. Mohon tidak membalas email ini.</p>
+      </div>
+
+      <div class="copyright text-grey" style="color: #9E9E9E; padding-top: 16px;">
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">Jamtangan.com - No.1 Watch Store in Indonesia</p>
+        <p style="margin: 0; font-size: 12px; line-height: 18px;">Copyright © 2023 Jamtangan.com/PT. Ming Jaya Sejahtera, All Rights Reserved.</p>
+      </div>
+
+      <div class="section image-banner" style="padding: 20px 0; padding-bottom: 0;">
+        <a href style="text-decoration: none; display: block; margin-bottom: 24px;">
+          <img src="https://placehold.co/520x58" alt style="width: 100%;">
+        </a>
+        <a href style="text-decoration: none; display: block; margin-bottom: 24px;">
+          <img src="https://placehold.co/520x58" alt style="width: 100%;">
+        </a>
+        <a href style="text-decoration: none; display: block; margin-bottom: 24px;">
+          <img src="https://placehold.co/520x58" alt style="width: 100%;">
+        </a>
+        <a href style="text-decoration: none; display: block;">
+          <img src="https://placehold.co/520x58" alt style="width: 100%;">
+        </a>
+      </div>
+
+      <div class="section" style="padding: 20px 0;">
+        <table class="table" id="table-10-years" style="width: 100%; border-collapse: collapse;" width="100%">
+          <tr style="border-top: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;">
+            <td style="padding: 14px 0; vertical-align: middle;" valign="middle">
+              <img src="https://assetsnew.machtwatch.net/images/pos/Logo-10th.png" width="143" alt="footer-banner-left">
+            </td>
+            <td style="text-align: right; padding: 14px 0; vertical-align: middle;" align="right" valign="middle">
+              <img src="https://assetsnew.machtwatch.net/images/pos/copy-10th.png" width="145" alt="footer-banner-right">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer" style="padding-top: 16px; padding-bottom: 16px; background: #000; padding-left: 40px; padding-right: 40px;">
+      <table class="table" style="width: 100%; border-collapse: collapse;" width="100%">
+        <tr>
+          <td class="text-grey" style="color: #9E9E9E;">Download Apps:</td>
+          <td class="text-grey text-right" style="color: #9E9E9E; text-align: right;" align="right">Ikuti Kami di:</td>
+        </tr>
+        <tr>
+          <td class="left-content" style="padding-top: 8px;">
+            <a href="https://jamtangan.page.link/RzBz" target="_blank" style="text-decoration: none; padding-right: 8px;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/playstore.png" alt="Play Store" class="app-stores" style="width: 107px; height: 32px;" width="107" height="32">
+            </a>
+            <a href="https://jamtangan.page.link/RzBz" target="_blank" style="text-decoration: none;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/appstore.png" alt="App Store" class="app-stores" style="width: 107px; height: 32px;" width="107" height="32">
+            </a>&nbsp;
+          </td>
+          <td class="right-content text-right" style="text-align: right; padding-top: 14px;" align="right">
+            <a href="https://api.whatsapp.com/send?phone=6282288884040" target="_blank" style="text-decoration: none; padding-right: 13.33px;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/sosmed-icon-wa.svg" alt="whatsapp" class="social-icon" style="width: 20px; height: 20px;" width="20" height="20">
+            </a>
+            <a href="https://www.instagram.com/machtwatch/" target="_blank" style="text-decoration: none; padding-right: 13.33px;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/sosmed-icon-ig.svg" alt="instagram" class="social-icon" style="width: 20px; height: 20px;" width="20" height="20">
+            </a>
+            <a href="https://www.facebook.com/jamtangancom" target="_blank" style="text-decoration: none; padding-right: 13.33px;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/sosmed-icon-fb.svg" alt="facebook" class="social-icon" style="width: 20px; height: 20px;" width="20" height="20">
+            </a>
+            <a href="https://twitter.com/machtwatch" target="_blank" style="text-decoration: none; padding-right: 13.33px;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/sosmed-icon-twitter.svg" alt="twitter" class="social-icon" style="width: 20px; height: 20px;" width="20" height="20">
+            </a>
+            <a href="https://www.tiktok.com/@jamtangan.com" target="_blank" style="text-decoration: none;">
+              <img src="https://assetsnew.machtwatch.net/images/pos/sosmed-icon-tiktok.svg" alt="tiktok" class="social-icon" style="width: 20px; height: 20px;" width="20" height="20">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
