@@ -72,6 +72,10 @@ p {
     padding: 20px 0;
 }
 
+.section:last-of-type {
+    padding-bottom: 20px;
+}
+
 .bordered {
     border-bottom: 1px #424242 solid;
 }
@@ -331,6 +335,10 @@ p {
 
     .section {
         padding: 12px 0;
+    }
+
+    .section:last-of-type {
+        padding-bottom: 12px;
     }
 
     .right-content a:not(:last-child) {
