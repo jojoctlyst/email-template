@@ -212,6 +212,7 @@ p {
 .badge.warranty .icon {
     margin-right: 4px;
     vertical-align: middle;
+    display: inline;
 }
 
 .badge-green {
