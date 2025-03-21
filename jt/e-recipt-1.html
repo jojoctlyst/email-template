@@ -86,8 +86,8 @@
                     <thead>
                     <tr>
                         <th>Produk</th>
-                        <th width="25%">Jumlah</th>
-                        <th width="25%">Harga</th>
+                        <th width="128px">Jumlah</th>
+                        <th width="128px">Harga</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -98,10 +98,10 @@
                                 General
                                 LTP-1275SG-7BDF Enticer Ladies White Dial Dual Tone Stainless
                             </div>
-                            <div class="badge warranty" style="margin-top: 4px">
+                            <div class="badge warranty">
                                 <img src="https://assets.jamtangan.com/images/pos/e-waranty-icon.png" class="icon"
                                      alt="waranty-icon" width="18" height="18"/>
-                                <div style="display: inline; vertical-align: sub">Garansi Aktif s.d. 1 Januari 2026</div>
+                                <div class="warranty-text">Garansi Aktif s.d. 1 Januari 2026</div>
                             </div>
                         </td>
                         <td>1</td>
@@ -120,8 +120,8 @@
                     </tr>
                     </tbody>
                 </table>
-                <table class="table table-item-detail">
-                    <tfoot>
+                <table class="table table-item-detail-summary">
+                    <tbody>
                     <tr>
                         <td colspan="2">Subtotal :</td>
                         <td>Rp5.220.000</td>
@@ -142,50 +142,33 @@
                         <td colspan="2">Diskon Toko :</td>
                         <td>-Rp20.000</td>
                     </tr>
-                    <tr class="highlight bold">
-                        <td>&nbsp;</td>
-                        <td>Total Tagihan :</td>
+                    <tr class="bold">
+                        <td colspan="2">Total Tagihan :</td>
                         <td>Rp5.170.000</td>
                     </tr>
-                    <tr>
-                        <td colspan="2">Kartu Kredit BCA :</td>
-                        <td>Rp1.000.000</td>
-                    </tr>
-                    <tr class="highlight-top">
-                        <td>&nbsp</td>
-                        <td>Kartu Debit Mandiri :</td>
+                    <tr class="summary-divider">
+                        <td class="text-left">1 Januari 2024, 14:03:31</td>
+                        <td  class="text-right">Transfer Bank BNI :</td>
                         <td>Rp1.000.000</td>
                     </tr>
                     <tr>
-                        <td colspan="2">Kartu Debit BSI :</td>
-                        <td>Rp1.000.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Transfer Bank BNI :</td>
-                        <td>Rp1.000.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Tunai :</td>
+                        <td class="text-left">1 Januari 2024, 14:03:31</td>
+                        <td class="text-right">Tunai :</td>
                         <td>Rp1.300.000</td>
                     </tr>
                     <tr>
                         <td colspan="2">Lebih Bayar :</td>
                         <td class="text-success">Rp130.000</td>
                     </tr>
-                    <tr>
+                    <tr class="text-red">
                         <td colspan="2">Kurang Bayar :</td>
-                        <td class="text-orange">-Rp20.000</td>
+                        <td>-Rp20.000</td>
                     </tr>
-                    <tr class="highlight">
-                        <td>&nbsp;</td>
-                        <td>Pelunasan (Kartu Debit BCA) :</td>
-                        <td>Rp1.170.000</td>
-                    </tr>
-                    <tr>
+                    <tr class="summary-divider">
                         <td colspan="2">JT Point yang Akan Didapatkan :</td>
                         <td>+140.000</td>
                     </tr>
-                    </tfoot>
+                    </tbody>
                 </table>
             </div>
 
@@ -204,7 +187,7 @@
                         sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam,
-                        quis nostrud exercitation 1 
+                        quis nostrud exercitation 1
                         ullamco laboris nisi ut aliquip
                         ex ea commodo consequat.
                         Duis aute irure dolor in
@@ -217,7 +200,24 @@
             <div class="section">
                 <p class="bold">Plaza Blok M</p>
                 <p>Plaza Blok M, Lantai 1 Unit 128-129 Jl. Bulungan No.76, Jakarta Selatan, DKI Jakarta</p>
-                <p>Telp: (021) 7209077 - 087886671311</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="https://assets.jamtangan.com/images/statics/icon-phone-white.png" class="icon"
+                             alt="phone-icon"
+                             width="12" height="12">
+                        <div class="contact-text">
+                            Telp: (021) 7209077
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://assets.jamtangan.com/images/statics/icon-whatsapp-white.png" class="icon"
+                             alt="whatsapp-icon"
+                             width="12" height="12">
+                        <div class="contact-text">
+                            WA: 087886671311
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="bordered text-grey pb-1">
@@ -230,7 +230,7 @@
             </div>
 
             <div class="section">
-                    <!--        image placeholder        -->
+                <!--        image placeholder        -->
             </div>
         </div>
 

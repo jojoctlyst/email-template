@@ -1,21 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+/* Base styles */
 body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    .background {
-        background-color: #222;
-    }
-
-    .main-content {
-        background-color: #181818;
-    }
 }
 
 .background {
@@ -29,34 +17,25 @@ body {
     padding: 40px 0 0;
     color: #FFFFFF;
     background-color: #181818;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
 }
 
-.main-content .content, .main-content .footer {
+.content {
     padding-left: 40px;
     padding-right: 40px;
 }
 
-.footer {
-    padding-top: 16px;
+/* Logo */
+.logo {
+    width: 220px;
     padding-bottom: 16px;
-    background: #000;
 }
 
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0;
-}
-
-.main-content, p {
-    font-size: 12px;
-    line-height: 18px;
-}
-
+/* Typography */
 .greeting-title {
     font-size: 16px;
     font-weight: 400;
@@ -64,207 +43,173 @@ p {
     margin-bottom: 10px;
 }
 
-.greeting-title span {
-    font-weight: 700;
-}
-
-.section {
-    padding: 20px 0;
-}
-
-.section:last-of-type {
-    padding-bottom: 20px;
-}
-
-.bordered {
-    border-bottom: 1px #424242 solid;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table.table-detail-customer tr td {
-    padding: 0;
-}
-
-.table.table-detail-customer tr:not(:last-child) td {
-    padding-bottom: 4px;
-}
-
-.table.table-item-detail thead {
-    background-color: #282828;
-}
-
-.table.table-item-detail thead th {
-    padding: 7px 0;
-    font-weight: 400;
-}
-
-.table.table-item-detail thead th:first-child,
-.table.table-item-detail tbody td:first-child {
-    padding-left: 16px;
-    text-align: left;
-}
-
-.table.table-item-detail thead th:nth-child(2),
-.table.table-item-detail tbody td:nth-child(2) {
-    text-align: center;
-}
-
-.table.table-item-detail thead th:last-child,
-.table.table-item-detail tbody td:last-child,
-.table.table-item-detail tfoot td:last-child {
-    padding-right: 16px;
-    text-align: right;
-}
-
-.table.table-item-detail tbody td {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1pt solid #313131;
-}
-
-.table.table-item-detail tbody tr:first-child td,
-.table.table-item-detail tfoot tr:first-child td {
-    padding-top: 16px;
-}
-
-.table.table-item-detail tfoot td {
-    padding-bottom: 10px;
-}
-
-.table.table-item-detail tfoot td:first-child {
-    width: 40%;
-}
-
-.table.table-item-detail tfoot td:first-child {
-    text-align: right;
-}
-
-.table .highlight td:not(:first-child) {
-    border-bottom: solid 1px #313131;
-}
-
-.table .highlight-top td:not(:first-child) {
-    border-top: solid 1px #313131;
-    padding-bottom: 0;
-}
-
-.table .highlight-top td:nth-child(2) {
-    text-align: right;
-}
-
-
-.table .highlight td:nth-child(2) {
-    text-align: right;
-}
-
-.table .highlight + tr td {
-    padding-top: 10px;
+p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .bold {
     font-weight: 700;
 }
 
-.card {
-    padding: 12px;
-    border-radius: 4px;
-    background: #282828;
-}
-
-.image-banner {
-    padding-bottom: 0;
-}
-
-.image-banner a {
-    display: block;
-}
-
-.image-banner a:not(:last-child) {
-    margin-bottom: 24px;
-}
-
-.image-banner a img {
-    width: 100%;
-}
-
-.badge {
-    font-family: "Poppins", sans-serif;
-    border-radius: 32px;
-    padding: 2px 8px;
-    width: fit-content;
-    float: right;
-    font-size: 10px;
-}
-
-.badge.warranty {
-    border-radius: 4px;
-    border: 1px solid #313131;
-    padding: 4px 8px;
-    float: none;
-    line-height: 16px;
-    letter-spacing: 0.25px;
-}
-
-.badge.warranty .icon {
-    margin-right: 4px;
-    vertical-align: middle;
-    display: inline;
-}
-
-.badge-green {
-    background: #1DAB6A;
-}
-
-.badge-orange {
-    background: #EF6C00;
-}
-
-.ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-}
-
-.text-orange {
-    color: #F68522;
+.text-grey {
+    color: #9E9E9E;
 }
 
 .text-success {
     color: #28C76F;
 }
 
-.text-grey {
-    color: #9E9E9E;
+.text-orange {
+    color: #F68522;
+}
+
+.text-red {
+    color: #F44336;
 }
 
 .text-right {
     text-align: right;
 }
 
-.copyright {
+/* Sections */
+.section {
+    padding: 20px 0;
+}
+
+.bordered {
+    border-bottom: 1px #424242 solid;
+}
+
+.pb-1 {
+    padding-bottom: 10px;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-detail-customer tr:not(:last-child) td {
+    padding: 0;
+    padding-bottom: 4px;
+}
+
+.table-detail-customer tr:last-child td {
+    padding: 0;
+}
+
+.table-item-detail thead {
+    background-color: #282828;
+}
+
+.table-item-detail thead th {
+    padding: 7px 0;
+    font-weight: 400;
+}
+
+.table-item-detail thead th:first-child,
+.table-item-detail tbody td:first-child,
+.table-item-detail-summary tbody td:first-child {
+    padding-left: 16px;
+    text-align: left;
+}
+
+.table-item-detail-summary tbody td:first-child {
+    text-align: right;
+}
+
+.table-item-detail-summary tbody td {
+    padding-bottom: 10px;
+}
+
+.table-item-detail thead th:last-child,
+.table-item-detail tbody td:last-child,
+.table-item-detail-summary tbody td:last-child {
+    padding-right: 16px;
+    text-align: right;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.table-item-detail tbody tr:first-child td {
     padding-top: 16px;
 }
 
-.left-content {
-    padding-top: 8px;
+.table-item-detail tbody tr:not(:first-child) td {
+    padding-top: 12px;
 }
 
-.left-content a:not(:last-child) {
-    padding-right: 8px;
+
+.table-item-detail tbody td {
+    padding-bottom: 12px;
+    border-bottom: 1pt solid #313131;
 }
 
-.right-content {
-    padding-top: 14px
+.table-item-detail-summary tbody tr:first-child td {
+    padding-top: 16px;
 }
 
-.right-content a:not(:last-child) {
-    padding-right: 13.33px;
+.table-item-detail-summary tbody td {
+    padding-bottom: 10px;
+}
+
+.table-item-detail-summary tbody td:last-child {
+    width: 162px;
+}
+
+
+.border-top-table {
+    border-top: solid 1px #313131;
+}
+
+.border-bottom-table {
+    border-bottom: solid 1px #313131;
+}
+
+.summary-divider td {
+    border-top: solid 1px #313131;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Badges */
+.badge {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 32px;
+    padding: 2px 8px;
+    width: fit-content;
+    font-size: 10px;
+}
+
+.badge-green {
+    background: #1DAB6A;
+    float: right;
+}
+
+.warranty {
+    border-radius: 4px;
+    border: 1px solid #313131;
+    padding: 4px 8px;
+    float: none;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    margin-top: 4px;
+}
+
+/* Icons */
+.icon {
+    margin-right: 4px;
+    vertical-align: middle;
+    display: inline;
+}
+
+.member-badge {
+    height: 18px;
 }
 
 .social-icon {
@@ -277,37 +222,89 @@ p {
     height: 32px;
 }
 
-.logo {
-    width: 220px;
-    padding-bottom: 16px;
-}
-
-.member-badge {
-    height: 18px;
+/* Cards */
+.card {
+    padding: 12px;
+    border-radius: 4px;
+    background: #282828;
 }
 
 .card.description p:first-child {
     margin-bottom: 8px;
 }
 
-.pb-1 {
-    padding-bottom: 10px;
+/* Footer */
+.footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #000;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-#table-10-years tr {
-    border-top: 1px solid #E0E0E0;
-    border-bottom: 1px solid #E0E0E0;
+.copyright {
+    padding-top: 16px;
 }
 
-#table-10-years tr td:first-child {
-    padding: 14px 0;
-    vertical-align: middle
+.left-content {
+    padding-top: 8px;
 }
 
-#table-10-years tr td:last-child {
-    text-align: right;
-    padding: 14px 0;
-    vertical-align: middle
+.right-content {
+    padding-top: 14px;
+}
+
+.right-content a:not(:last-child) {
+    padding-right: 13.33px;
+}
+
+/* Contact info section */
+.contact-info {
+    display: flex;
+}
+
+.contact-item {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.contact-item:first-child {
+    margin-right: 8px;
+}
+
+.contact-text {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* Update existing icon class if needed */
+.icon {
+    margin-right: 4px;
+    vertical-align: middle;
+    display: inline;
+}
+
+/* For responsive design */
+@media only screen and (max-width: 600px) {
+    .contact-text {
+        font-size: 8px !important;
+        line-height: 10.8px;
+    }
+}
+
+/* Media queries */
+@media (prefers-color-scheme: dark) {
+    .background {
+        background-color: #222;
+    }
+
+    .main-content {
+        background-color: #181818;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -315,17 +312,15 @@ p {
         padding: 24px 0 0;
     }
 
-    .main-content .content, .main-content .footer {
+    .main-content .content,
+    .main-content .footer {
         padding-left: 24px;
         padding-right: 24px;
     }
 
-    .main-content, p {
-        font-size: 8px !important;
-        line-height: 10.8px;
-    }
-
+    .main-content,
     p {
+        font-size: 8px !important;
         line-height: 10.8px;
     }
 
@@ -386,12 +381,12 @@ p {
 
     .table.table-item-detail thead th:last-child,
     .table.table-item-detail tbody td:last-child,
-    .table.table-item-detail tfoot td:last-child {
+    .table.table-item-detail-summary tbody td:last-child {
         padding-right: 9.6px;
     }
 
     .table.table-item-detail tbody tr:first-child td,
-    .table.table-item-detail tfoot tr:first-child td {
+    .table.table-item-detail-summary tbody tr:first-child td {
         padding-top: 9.6px;
     }
 
@@ -399,12 +394,8 @@ p {
         padding-bottom: 7.2px;
     }
 
-    .table.table-item-detail tfoot td {
+    .table.table-item-detail-summary tbody td {
         padding-bottom: 6px;
-    }
-
-    .table .highlight + tr td {
-        padding-top: 6px;
     }
 
     .card {
@@ -450,7 +441,32 @@ p {
     }
 
     .right-content {
-        padding-top: 8.4px
+        padding-top: 8.4px;
     }
+}
 
+/* Warranty badge styles */
+.warranty {
+    border-radius: 4px;
+    border: 1px solid #313131;
+    padding: 4px 8px;
+    float: none;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.warranty-text {
+    display: inline;
+    vertical-align: middle;
+}
+
+/* For responsive design */
+@media only screen and (max-width: 600px) {
+    .warranty-text {
+        font-size: 8px !important;
+        line-height: 10.8px;
+    }
 }
