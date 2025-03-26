@@ -6,6 +6,14 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    display: inline !important;
+}
+
 .background {
     background-color: #222;
 }
@@ -136,17 +144,13 @@ p {
     text-align: left !important;
 }
 
-.table-item-detail tbody tr:first-child td {
-    padding-top: 16px;
-}
-
-.table-item-detail tbody tr:not(:first-child) td {
-    padding-top: 12px;
+.text-center {
+    text-align: center !important;
 }
 
 
 .table-item-detail tbody td {
-    padding-bottom: 12px;
+    padding: 12px 0;
     border-bottom: 1pt solid #313131;
 }
 
@@ -155,7 +159,7 @@ p {
 }
 
 .table-item-detail-summary tbody td {
-    padding-bottom: 10px;
+    padding: 6px 0;
 }
 
 .table-item-detail-summary tbody td:last-child {
